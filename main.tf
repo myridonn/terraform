@@ -4,10 +4,10 @@ resource "docker_image" "nginx" {
 }
 
 resource "docker_container" "nginx" {
-  image = docker_image.nginx.image_id
+  image = docker_image.nginx.latest
   name  = "tutorial"
   ports {
     internal = 80
-    external = 8000
+    external = 80
   }
 }
