@@ -1,5 +1,5 @@
 resource "docker_image" "nginx" {
-  name         = "nginx:[1].[27]"
+  name         = "nginx:latest"
   keep_locally = false
 }
 
