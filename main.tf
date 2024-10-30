@@ -1,13 +1,15 @@
+provider "docker" {}
+
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
   keep_locally = false
 }
 
 resource "docker_container" "nginx" {
-  image = docker_image.nginx.[1].[27]
-  name  = "tutorial"
+  image = docker_image.nginx.latest
+  name  = "nginx_container"
   ports {
     internal = 80
-    external = 80
+    external = 8080
   }
 }
