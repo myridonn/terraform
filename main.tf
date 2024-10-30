@@ -8,6 +8,6 @@ resource "docker_container" "nginx" {
   name  = "nginx"
   ports {
     internal = 80
-    external = 8080
+    external = 8088
   }
 }
